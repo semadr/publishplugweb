@@ -4,7 +4,7 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { LovableMark } from "@lovable.dev/cloud-auth-js/react";
 import { Loader2, MailCheck } from "lucide-react";
-import heroImg from "@/assets/hero-books.jpg";
+import heroImg from "@/assets/hero-books-brand.jpg";
 import { Logo } from "@/components/brand/logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
