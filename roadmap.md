@@ -6,10 +6,15 @@
 - [x] Author dashboard, 4-step new book wizard, quote calculator
 - [x] Test-mode card checkout (4242 card, decline card, receipt) — swap for real payments later
 
+## Phase 1.5 — done
+- [x] Naira price list, Standard/Premium tiers, Audio Add-On, no package discount
+- [x] Official logo, favicon and brand colours
+
 ## Phase 2
-- [ ] Content workspace (rich text editor, autosave, versions, .docx import/export, uploads, mock transcripts)
-- [ ] Messages thread, project tracker deliverables
-- [ ] Staff view: project list, stage changes, custom quotes, deliverable uploads
+- [x] Book workspace after payment: file uploads with versions, messages thread
+- [x] Team board: project list, stage changes, custom quotes, deliverable uploads
+- [ ] Rich text editor with autosave, .docx import/export, mock transcripts
+- [ ] Author approval of deliverables
 
 ## Phase 3
 - [ ] Design forms + spine/cover-size calculator, print-ready checklist
@@ -20,5 +25,5 @@
 - [ ] Demo data (3 authors, 2 staff, 1 admin, 3 books), role checks, mobile & accessibility pass
 
 ## Waiting on the user
-- [ ] Official logo
-- [ ] Real prices for transformations, launch plan, website, marketing
+- [ ] Email to give team (staff) access
+- [ ] What Premium includes vs Standard (copy only)

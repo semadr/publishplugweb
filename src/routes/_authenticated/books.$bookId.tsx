@@ -266,7 +266,7 @@ function BookPage() {
               {ordered ? "Share files and talk to the team working on your book." : "Questions about your quote? Message the team."}
             </p>
           </div>
-          <Tabs defaultValue={ordered ? "files" : "messages"} className="mt-6">
+          <Tabs key={ordered ? "ordered" : "quoted"} defaultValue={ordered ? "files" : "messages"} className="mt-6">
             <TabsList>
               {ordered && <TabsTrigger value="files">Files</TabsTrigger>}
               <TabsTrigger value="messages">Messages</TabsTrigger>

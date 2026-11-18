@@ -16,7 +16,7 @@ import {
   Users,
   Library,
 } from "lucide-react";
-import heroImg from "@/assets/hero-books.jpg";
+import heroImg from "@/assets/hero-books-brand.jpg";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Button } from "@/components/ui/button";
@@ -133,7 +133,7 @@ function Landing() {
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-brand opacity-25 blur-2xl" aria-hidden="true" />
             <img
               src={heroImg}
-              alt="Golden hardcover books and an open book on white linen"
+              alt="Blue, orange and yellow hardcover books beside an open book on white linen"
               width={1600}
               height={1104}
               className="relative aspect-[4/3] w-full rounded-[1.75rem] object-cover shadow-lift ring-1 ring-border"
