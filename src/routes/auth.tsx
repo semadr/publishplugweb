@@ -4,7 +4,7 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { LovableMark } from "@lovable.dev/cloud-auth-js/react";
 import { Loader2, MailCheck } from "lucide-react";
-import heroImg from "@/assets/hero-books-brand.jpg";
+import heroImg from "@/assets/publish-plug-hero-book.jpg.asset.json";
 import { Logo } from "@/components/brand/logo";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -182,7 +182,7 @@ function AuthPage() {
         <Link to="/" className="text-xs text-muted-foreground hover:text-foreground">← Back to home</Link>
       </div>
       <div className="relative hidden overflow-hidden lg:block">
-        <img src={heroImg} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={heroImg.url} alt="" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
         <blockquote className="absolute bottom-10 left-10 right-10 text-ink-foreground">
           <p className="font-display text-3xl italic leading-snug">“From first idea to every bookshelf — without sending you to five different vendors.”</p>
