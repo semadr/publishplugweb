@@ -36,6 +36,13 @@
       "when": 1795015654108,
       "tag": "0004_team_email_hello",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795016050222,
+      "tag": "0005_author_workspace",
+      "breakpoints": true
     }
   ]
 }

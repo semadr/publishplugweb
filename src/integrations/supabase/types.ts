@@ -14,6 +14,70 @@ export type Database = {
   }
   public: {
     Tables: {
+      book_briefs: {
+        Row: {
+          answers: Json
+          project_id: string
+          submitted_at: string | null
+          updated_at: string
+          updated_by: string | null
+        }
+        Insert: {
+          answers?: Json
+          project_id: string
+          submitted_at?: string | null
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Update: {
+          answers?: Json
+          project_id?: string
+          submitted_at?: string | null
+          updated_at?: string
+          updated_by?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "book_briefs_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: true
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      manuscripts: {
+        Row: {
+          content: Json
+          project_id: string
+          updated_at: string
+          updated_by: string | null
+          word_count: number
+        }
+        Insert: {
+          content?: Json
+          project_id: string
+          updated_at?: string
+          updated_by?: string | null
+          word_count?: number
+        }
+        Update: {
+          content?: Json
+          project_id?: string
+          updated_at?: string
+          updated_by?: string | null
+          word_count?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "manuscripts_project_id_fkey"
+            columns: ["project_id"]
+            isOneToOne: true
+            referencedRelation: "projects"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       messages: {
         Row: {
           body: string
@@ -178,6 +242,9 @@ export type Database = {
           kind: string
           name: string
           project_id: string
+          review_note: string | null
+          review_status: string | null
+          reviewed_at: string | null
           size_bytes: number | null
           storage_path: string
           uploaded_by: string
@@ -189,6 +256,9 @@ export type Database = {
           kind: string
           name: string
           project_id: string
+          review_note?: string | null
+          review_status?: string | null
+          reviewed_at?: string | null
           size_bytes?: number | null
           storage_path: string
           uploaded_by?: string
@@ -200,6 +270,9 @@ export type Database = {
           kind?: string
           name?: string
           project_id?: string
+          review_note?: string | null
+          review_status?: string | null
+          reviewed_at?: string | null
           size_bytes?: number | null
           storage_path?: string
           uploaded_by?: string
