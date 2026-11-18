@@ -16,7 +16,7 @@ import {
   Users,
   Library,
 } from "lucide-react";
-import heroImg from "@/assets/hero-books-brand.jpg";
+import heroImg from "@/assets/publish-plug-hero-book.jpg.asset.json";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { Button } from "@/components/ui/button";
@@ -132,11 +132,11 @@ function Landing() {
           <div className="relative animate-rise [animation-delay:150ms]">
             <div className="absolute -inset-4 rounded-[2rem] bg-gradient-brand opacity-25 blur-2xl" aria-hidden="true" />
             <img
-              src={heroImg}
-              alt="Blue, orange and yellow hardcover books beside an open book on white linen"
-              width={1600}
-              height={1104}
-              className="relative aspect-[4/3] w-full rounded-[1.75rem] object-cover shadow-lift ring-1 ring-border"
+              src={heroImg.url}
+              alt="Two copies of a published purple paperback standing upright on cream linen, beside a cup of pens and a straw hat"
+              width={800}
+              height={977}
+              className="relative aspect-[4/5] w-full rounded-[1.75rem] object-cover object-center shadow-lift ring-1 ring-border"
             />
             <div className="absolute -bottom-6 left-6 rounded-2xl border border-border bg-card px-5 py-4 shadow-lift">
               <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Idea → Bookshelf</p>
