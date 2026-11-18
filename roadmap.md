@@ -9,6 +9,7 @@
 ## Phase 1.5 — done
 - [x] Naira price list, Standard/Premium tiers, Audio Add-On, no package discount
 - [x] Official logo, favicon and brand colours
+- [x] Ghostwriting priced per word so idea books can be paid
 
 ## Phase 2
 - [x] Book workspace after payment: file uploads with versions, messages thread
@@ -25,5 +26,4 @@
 - [ ] Demo data (3 authors, 2 staff, 1 admin, 3 books), role checks, mobile & accessibility pass
 
 ## Waiting on the user
-- [ ] Ghostwriting per-word price (rate from the user) so "just an idea" books can be paid
 - [ ] What Premium includes vs Standard (copy only)

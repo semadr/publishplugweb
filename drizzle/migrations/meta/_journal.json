@@ -29,6 +29,13 @@
       "when": 1795015062429,
       "tag": "0003_restrict_services_read_to_active",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795015654108,
+      "tag": "0004_team_email_hello",
+      "breakpoints": true
     }
   ]
 }

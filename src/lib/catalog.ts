@@ -10,7 +10,7 @@ export const SOURCE_OPTIONS: {
     value: "idea",
     label: "Idea or outline",
     blurb: "You have the idea; our ghostwriters write the book with you.",
-    needs: "Ghostwriting is quoted personally by our team.",
+    needs: "Ghostwriting is ₦2 per word of the finished book.",
   },
   {
     value: "manuscript",

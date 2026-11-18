@@ -21,7 +21,8 @@ const s = (
 
 // Publish Plug price list (Naira).
 const catalog: Service[] = [
-  s("ghostwriting", "quote", null),
+  s("ghostwriting", "per_word", 2),
+  s("custom_service", "quote", null),
   s("edit_developmental", "per_word", 2.5),
   s("edit_line", "per_word", 2.5),
   s("edit_copy", "per_word", 2.5),
@@ -118,9 +119,18 @@ describe("flat services", () => {
   });
 });
 
+describe("ghostwriting", () => {
+  it("is ₦2 per word of the finished book", () => {
+    const lines = buildQuoteLines({ ...base, sourceType: "idea", wordCount: 50_000 });
+    expect(lines[0]?.code).toBe("ghostwriting");
+    expect(lines[0]?.price).toBe(100_000);
+    expect(quoteTotals(lines).pendingQuotes).toBe(0);
+  });
+});
+
 describe("quote-only services", () => {
   it("show as pending until staff enter a price", () => {
-    const lines = buildQuoteLines({ ...base, sourceType: "idea" });
+    const lines = buildQuoteLines({ ...base, extras: ["custom_service"] });
     expect(lines[0]?.price).toBeNull();
     expect(quoteTotals(lines).pendingQuotes).toBe(1);
   });
