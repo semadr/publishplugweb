@@ -225,7 +225,7 @@ function Wizard({ id, initial }: { id?: string; initial: BookDraft }) {
                 <Field label="Language" htmlFor="language">
                   <Input id="language" value={d.language} onChange={(e) => set("language", e.target.value)} />
                 </Field>
-                <Field label="Approximate word count" htmlFor="words" hint={pageCount ? `≈ ${pageCount} printed pages (you can adjust this later)` : "Your best estimate is fine."}>
+                <Field label={d.source_type === "idea" ? "How many words should the finished book be?" : "Approximate word count"} htmlFor="words" hint={d.source_type === "idea" ? `Ghostwriting is priced per word of the finished book${pageCount ? ` · ≈ ${pageCount} printed pages` : ""}.` : pageCount ? `≈ ${pageCount} printed pages (you can adjust this later)` : "Your best estimate is fine."}>
                   <Input
                     id="words"
                     type="number"

@@ -88,6 +88,7 @@ function BookPage() {
   const editable = project.stage === "draft" || project.stage === "quoted";
   const ordered = stageIndex(project.stage) >= stageIndex("ordered");
   const consentFiles = files.filter((f) => f.kind === "consent");
+  const pendingNames = lines.filter((l) => l.price == null).map((l) => l.name);
 
   const gates = [
     project.source_type === "monograph" && {
@@ -100,7 +101,7 @@ function BookPage() {
     },
     totals.pendingQuotes > 0 && {
       ok: false,
-      label: "Custom quote from our team for every service",
+      label: `Our team prices ${pendingNames.join(", ")} for you — we'll message you here once it's ready`,
     },
   ].filter(Boolean) as { ok: boolean; label: string }[];
   const canOrder = project.stage === "quoted" && orders.length > 0 && gates.every((g) => g.ok);
@@ -227,6 +228,15 @@ function BookPage() {
               <Button variant="brand" size="xl" className="w-full" disabled={!canOrder} onClick={() => setPayOpen(true)}>
                 <CreditCard /> Accept quote & place order
               </Button>
+              {!canOrder && gates.some((g) => !g.ok) && (
+                <p role="status" className="flex items-start gap-2 rounded-xl bg-sun/20 px-4 py-3 text-sm">
+                  <Lock className="mt-0.5 h-4 w-4 shrink-0" />
+                  <span>
+                    <span className="font-semibold">Why can't I order yet? </span>
+                    {gates.filter((g) => !g.ok).map((g) => g.label).join(". ")}.
+                  </span>
+                </p>
+              )}
             </div>
           )}
         </section>

@@ -25,5 +25,5 @@
 - [ ] Demo data (3 authors, 2 staff, 1 admin, 3 books), role checks, mobile & accessibility pass
 
 ## Waiting on the user
-- [ ] Email to give team (staff) access
+- [ ] Ghostwriting per-word price (rate from the user) so "just an idea" books can be paid
 - [ ] What Premium includes vs Standard (copy only)
