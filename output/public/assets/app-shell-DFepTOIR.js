@@ -1,0 +1,1 @@
+import{o as e}from"./useSelector-D4oWBxsf.js";import{t}from"./site-header-D8dNe4Lw.js";var n=e();function r({children:e}){return(0,n.jsxs)(`div`,{className:`min-h-screen bg-gradient-paper`,children:[(0,n.jsx)(t,{}),(0,n.jsx)(`main`,{className:`mx-auto max-w-6xl px-5 py-10`,children:e})]})}export{r as t};

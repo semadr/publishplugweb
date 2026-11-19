@@ -1,0 +1,1 @@
+import{A as e,O as t,k as n}from"./site-header-D8dNe4Lw.js";function r(r,i){return t({...r,enabled:!0,suspense:!0,throwOnError:n,placeholderData:void 0},e,i)}export{r as t};
